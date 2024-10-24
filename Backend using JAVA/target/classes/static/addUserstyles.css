@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-image:url(https://th.bing.com/th/id/OIP.bget4M_o7J-E_S1LP6f-YAAAAA?rs=1&pid=ImgDetMain);
+    background-size: cover;
+}
+
+
+.container{
+    width:300px;
+    height:350px;
+    background-color: rgb(255, 255, 255);
+    border:2px black solid;
+    border-radius: 30px;
+
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+.field{
+    display:block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.typing{
+    display: flex;
+    margin-top: 10px;
+    width:90%;
+    margin-left: 10px;
+    border:none;
+    border-bottom:1px black solid;
+}
+
+button{
+    align-items: center;
+    margin-top: 35px;
+    width:80px;
+    border-radius: 15px;
+    padding:5px;
+}
+
+#form{
+    text-align: center;
+}
+

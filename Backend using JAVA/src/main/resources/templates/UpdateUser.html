@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/addUserstyles.css}">
+    <title>Register a User</title>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Update the User details</h2>
+    <form id="form" role="form" method="post" th:action="@{/updateuser/save}" th:object="${user}">
+
+        <input type="hidden" th:field="*{id}">
+
+
+        <label for="firstname" class="field">First Name</label>
+        <input id="firstname" th:field="*{firstName}"
+               required pattern="[A-Za-z]{3,30}"
+               title="First name should contain a minimum of 3 letters and a maximum of 30 letters"
+               placeholder="Enter your First Name" class="typing">
+
+        <label for="lastname" class="field">Last Name</label>
+        <input id="lastname" th:field="*{lastName}"
+               required pattern="[A-Za-z]{1,30}"
+               title="Last name should contain a minimum of 1 letter and a maximum of 30 letters"
+               placeholder="Enter your Last Name" class="typing">
+
+        <label for="email" class="field">Email</label>
+        <input id="email" th:field="*{email}"
+               type="email"
+               required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+               title="Email should be a valid @gmail.com address"
+               placeholder="Enter your Email ID" class="typing">
+
+
+        <button>Register</button>
+
+    </form>
+</div>
+
+
+</body>
+</html>
